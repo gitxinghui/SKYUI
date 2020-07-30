@@ -1,0 +1,53 @@
+<!--pages/component/draw/index.wxml-->
+<cu-custom bgColor="bg-gradual-pink" isCustom="{{true}}">
+  <view slot="content">拖拽盒子</view>
+</cu-custom>
+<view class="box bg-white">
+  <!-- 参数说明 -->
+  <view class="cu-bar bg-white">
+    <view class="action">
+      <text class="cuIcon-title text-orange"></text>参数说明
+    </view>
+  </view>
+  <view class="padding-sm">
+    <view class="flex align-center justify-center parameter">
+      <view class="solid-bottom text-xl padding">position:默认距离</view>
+      <view class="solid-bottom text-xl padding">isShow:是否显示</view>
+      <view class="solid-bottom text-xl padding">dragAnimation:默认拖拽效果</view>
+      <view class="solid-bottom text-xl padding">translatePage:拖拽范围</view>
+      <view class="solid-bottom text-xl padding">更多效果尽情期待(1.更多生动拖拽效果；2.点击出现列表；3.侧边停靠收缩隐藏......)</view>
+    </view>
+  </view>
+  <!-- 拖拽盒子控制器 -->
+  <view class="cu-bar bg-white solid-bottom">
+    <view class='action'>
+      <text class='cuIcon-titles text-orange '></text>渐变
+    </view>
+    <view class='action'>
+      <switch class='sm' checked="{{dragAnimation == 'dragLinear' ? true : false}}" bindchange='dragAnimationLinear'></switch>
+    </view>
+  </view>
+  <view class="cu-bar bg-white solid-bottom">
+    <view class='action'>
+      <text class='cuIcon-titles text-orange '></text>淡入
+    </view>
+    <view class='action'>
+      <switch class='sm' checked="{{dragAnimation == 'dragEaseIn' ? true : false}}" bindchange='dragAnimationEaseIn'></switch>
+    </view>
+  </view>
+  <view class="cu-bar bg-white solid-bottom">
+    <view class='action'>
+      <text class='cuIcon-titles text-orange '></text>淡出
+    </view>
+    <view class='action'>
+      <switch class='sm' checked="{{dragAnimation == 'dragEaseOut' ? true : false}}" bindchange='dragAnimationEaseOut'></switch>
+    </view>
+  </view>
+  <!-- 引入拖拽事件 -->
+  <wxs module="move" src="./../../../utils/wxs/draw.wxs"></wxs>
+  <block wx:if="{{isShow}}">
+    <view class="drag {{dragAnimation}}" data-type="{{translatePage}}" data-area="{{safeArea}}" change:prop="{{move.init}}" prop="{{position}}" catchtouchmove="{{move.handleTouchMove}}" catchtouchend="{{move.handleTouchEnd}}">
+      <text class="cuIcon-home drawIcon" catchtap="goHome"></text>
+    </view>
+  </block>
+</view>

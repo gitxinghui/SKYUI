@@ -1,0 +1,13 @@
+.flex-hor-wrap-3 {
+	width: calc(calc(100% - 20rpx)/ 3);
+	margin-right: 10rpx;
+	margin-bottom: 10rpx;
+}
+.flex-hor-wrap-4 {
+	width: calc(calc(100% - 30rpx)/ 4);
+	margin-right: 10rpx;
+	margin-bottom: 10rpx;
+}
+.flex-hor-wrap-3:nth-child(3n),.flex-hor-wrap-4:nth-child(4n) {
+	margin-right: 0;
+}

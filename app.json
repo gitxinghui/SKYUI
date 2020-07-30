@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/basics/home/home",
+    "pages/basics/layout/layout",
+    "pages/logs/logs",
+    "pages/component/home/home",
+    "pages/component/draw/draw",
+    "pages/component/form/form",
+    "pages/plugin/home/index",
+    "pages/auth/auth"
+  ],
+  "usingComponents": {
+    "cu-custom": "/skyui/components/cu-custom"
+  },
+  "window": {
+    "navigationBarBackgroundColor": "#39b54a",
+    "navigationBarTitleText": "SKY UI",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "version": "v1.0",
+  "sitemapLocation": "sitemap.json"
+}

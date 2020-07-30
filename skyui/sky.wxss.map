@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,gBAAgB,CAAC;EAChB,KAAK,EAAE,2BAA2B;EAClC,YAAY,EAAE,KAAK;EACnB,aAAa,EAAE,KAAK;CACpB;;AACD,AAAA,gBAAgB,CAAC;EAChB,KAAK,EAAE,2BAA2B;EAClC,YAAY,EAAE,KAAK;EACnB,aAAa,EAAE,KAAK;CACpB;;AACD,AAAA,gBAAgB,AAAA,UAAW,CAAA,EAAE,GAAE,gBAAgB,AAAA,UAAW,CAAA,EAAE,EAAE;EAC7D,YAAY,EAAE,CAAC;CACf",
+    "sources": [
+        "sky.scss"
+    ],
+    "names": [],
+    "file": "sky.wxss"
+}

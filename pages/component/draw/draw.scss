@@ -1,0 +1,30 @@
+/* pages/component/draw/index.wxss */
+.box {
+    width: 100vw;
+    height: 100vh;
+}
+.parameter {
+    flex-direction: column;
+}
+.drag{
+    position: fixed;
+    top: 800rpx;
+    left: 650rpx;
+    width: 72rpx;
+    height: 72rpx;
+    border: none;
+    z-index: 10000;
+    box-sizing: border-box;
+    .drawIcon {
+        font-size: 72rpx;
+    }
+}
+.dragLinear {
+    transition: all linear;
+}
+.dragEaseIn {
+    transition: all 0.3s ease 0s;
+}
+.dragEaseOut {
+    transition: all 0s ease 0.3s;
+}

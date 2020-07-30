@@ -1,0 +1,45 @@
+/**
+ * author: gitxinghui
+ * date: 2020/7/30
+ * content: 表单输入内容格式化
+ * eg: 银行卡格式、银行卡隐藏、手机号隐藏等等
+ */
+
+
+/**
+ * 
+ * @param value String
+ * content: 银行卡账号格式化，添加空格
+ */
+function bankCardFormat (value = '') {
+  if (value == '') return '';
+  var result = value.replace(getRegExp('\s','g'),'').replace(getRegExp('[^\w]','g'),'').replace(getRegExp('(\w{4})(?=\w)','g'),'$1 ');
+  return result;
+} 
+
+/**
+ * 
+ * @param value String
+ * content: 银行卡隐藏，只显示后3位
+ */
+function bankCardHide (value = '') {
+  if (value == '') return '';
+  var result = value.replace(getRegExp('\s','g'), '').replace(getRegExp('(\w{4})\w+(\w{3})$'),"**** **** **** **** $2");
+  return result;
+}
+
+/**
+ * 
+ * @param value String
+ * content: 截取一段字符串,返回后4位
+ * eg: 手机号后四位、银行卡后四位、身份证后四位等等
+ */
+function stringLastfour(value) {
+  if (value == '') return '';
+  return value.slice(value.length-4);
+}
+module.exports = {
+  bankCardFormat: bankCardFormat,
+  bankCardHide: bankCardHide,
+  stringLastfour: stringLastfour
+}

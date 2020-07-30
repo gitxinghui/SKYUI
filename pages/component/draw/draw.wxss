@@ -1,0 +1,44 @@
+/* pages/component/draw/index.wxss */
+.box {
+  width: 100vw;
+  height: 100vh;
+}
+
+.parameter {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.drag {
+  position: fixed;
+  top: 800rpx;
+  left: 650rpx;
+  width: 72rpx;
+  height: 72rpx;
+  border: none;
+  z-index: 10000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.drag .drawIcon {
+  font-size: 72rpx;
+}
+
+.dragLinear {
+  -webkit-transition: all linear;
+  transition: all linear;
+}
+
+.dragEaseIn {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.dragEaseOut {
+  -webkit-transition: all 0s ease 0.3s;
+  transition: all 0s ease 0.3s;
+}
+/*# sourceMappingURL=draw.wxss.map */
