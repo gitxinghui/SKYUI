@@ -26,6 +26,11 @@
 	</view>
 	<view class="cu-form-group">
 		<view class="title">验证码</view>
+		<input placeholder="验证码发送，显示倒计时"></input>
+		<button class="cu-btn bg-green shadow sendCodeBtn" bindtap="sendCode">{{wxTimer && wxTimerSecond != 0  ? wxTimerSecond+'S刷新' : '验证码'}}</button>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">验证码</view>
 		<input placeholder="输入框带个按钮"></input>
 		<button class="cu-btn bg-green shadow">验证码</button>
 	</view>

@@ -1,4 +1,5 @@
 const app = getApp();
+let timer = require('./../../../utils/tools/countDownTime.js');
 Page({
   data: {
     StatusBar: app.globalData.StatusBar,
@@ -60,6 +61,7 @@ Page({
     textareaAValue: '',
     textareaBValue: '',
     bankCard: '',// 格式化后的银行卡号
+    wxTimerList: {}
   },
   PickerChange(e) {
     console.log(e);
@@ -209,4 +211,22 @@ Page({
       bankCard: card,
     })
   },
+  /**
+   * 
+   * @param {*} e 
+   * date: 2020/7/31
+   * content: '发送验证码，显示倒计时'
+   */
+  sendCode(e) {
+    let wxTimer = new timer({
+      beginTime:"00:01:00",
+      name:'wxTimer',
+      complete:function(){
+          console.log("完成了");
+          // 清空定时器
+          wxTimer.stop();
+      }
+    })
+    wxTimer.start(this);
+  }
 })
